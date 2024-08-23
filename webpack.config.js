@@ -16,9 +16,7 @@ function getBasePath(port) {
   if (PROXY_URI) {
     const proxyURL = PROXY_URI.replace("{{port}}", port);
     const intermediatePath = proxyURL.split("//")[1];
-    const desiredPath = intermediatePath.substring(
-      intermediatePath.indexOf("/")
-    );
+    const desiredPath = intermediatePath.substring(intermediatePath.indexOf("/"));
     return JSON.stringify(desiredPath);
   } else {
     return JSON.stringify("/");
@@ -29,6 +27,7 @@ module.exports = {
   entry: { main: path.resolve(__dirname, "src", "index.js") },
 
   output: {
+    publicPath: "/",
     filename: "js/[name].js",
     clean: true,
     path: path.resolve(__dirname, "build"),
@@ -82,7 +81,6 @@ module.exports = {
       webSocketURL: getWebSocketURL(3000),
     },
   },
-
   performance: {
     hints: false,
     maxEntrypointSize: 512000,

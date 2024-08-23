@@ -1,19 +1,28 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Dashboard from "./components/Dashboard.vue";
 import Backlog from "./components/Backlog.vue";
-import Issues from "./components/Issues.vue";
+import Describe from "./components/Describe.vue";
+import Create from "./components/Create.vue";
+import Epic from "./components/Epic.vue";
 const routes = [
   {
     path: "/",
-    component: Dashboard,
+    component: Backlog,
   },
   {
     path: "/backlog",
     component: Backlog,
   },
   {
-    path: "/issues",
-    component: Issues,
+    path: "/backlog/:id",
+    component: Describe,
+  },
+  {
+    path: "/create",
+    component: Create,
+  },
+  {
+    path: "/epic",
+    component: Epic,
   },
 ];
 

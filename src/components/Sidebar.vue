@@ -1,8 +1,8 @@
 <template>
   <div class="sidenav">
-    <RouterLink to="/">Dashboard</RouterLink>
+    <RouterLink to="/create">Create</RouterLink>
     <RouterLink to="/backlog">Backlog</RouterLink>
-    <RouterLink to="/issues">Issues</RouterLink>
+    <RouterLink to="/epic">Epic</RouterLink>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ import { RouterLink } from "vue-router";
 <style>
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 200px;
   position: fixed;
   z-index: 1;
   background-color: #111;

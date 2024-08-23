@@ -13,6 +13,7 @@ import Sidebar from "./components/Sidebar.vue";
 <style>
 .main {
   margin-top: 10px;
-  margin-left: 220px;
+  margin-left: 260px;
+  margin-right: 60px;
 }
 </style>

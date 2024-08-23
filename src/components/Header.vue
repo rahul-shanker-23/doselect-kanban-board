@@ -1,6 +1,6 @@
 <template>
   <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Kanban Board</a>
+    <h3>Kanban Board</h3>
   </div>
 </template>
 
@@ -8,31 +8,17 @@
 <style>
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #0d6efd;
 }
 
-.topnav a {
+.topnav h3 {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #ffffff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
-  width: 160px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04aa6d;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
+  font-size: 25px;
+  width: 200px;
 }
 </style>

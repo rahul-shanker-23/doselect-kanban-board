@@ -1,12 +1,94 @@
 {
-    "dummyData": [
-        {
-            "id": 1,
-            "data": "I ♥️ Vue"
-        },
-        {
-            "id":2,
-            "data": "Vue is a JavaScript framework for building user interfaces."
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Jake"
+    },
+    {
+      "id": 2,
+      "name": "Beth"
+    },
+    {
+      "id": 3,
+      "name": "Ryan"
+    },
+    {
+      "id": 4,
+      "name": "Sara"
+    },
+    {
+      "id": 5,
+      "name": "Bob"
+    },
+    {
+      "id": 6,
+      "name": "Emma"
+    },
+    {
+      "id": 7,
+      "name": "Eric"
+    },
+    {
+      "id": 8,
+      "name": "Jill"
+    },
+    {
+      "id": 9,
+      "name": "Dean"
+    },
+    {
+      "id": 10,
+      "name": "Zoe"
+    }
+  ],
+  "issue": [
+    {
+      "issueType": "Epic",
+      "title": "Perl to Python",
+      "reporter": "Bob",
+      "assignee": "Eric",
+      "description": "Migrating Perl to Python",
+      "priority": "Medium",
+      "severity": "Critical",
+      "epic": null,
+      "status": "In Review",
+      "id": 1
+    },
+    {
+      "issueType": "Story",
+      "title": "Migrating Header ",
+      "reporter": "Beth",
+      "assignee": "Sara",
+      "description": "Migrating Header Components",
+      "priority": "Low",
+      "severity": "Minor",
+      "epic": "Perl to Python",
+      "status": "Backlog",
+      "id": 2
+    },
+    {
+      "issueType": "Bug",
+      "title": "bug in header",
+      "reporter": "Emma",
+      "assignee": "Sara",
+      "description": "bug in header",
+      "priority": "Low",
+      "severity": "Critical",
+      "epic": null,
+      "status": "In Progress",
+      "id": 3
+    },
+    {
+      "issueType": "Story",
+      "title": "test",
+      "reporter": "Beth",
+      "assignee": "Bob",
+      "description": "test",
+      "priority": "Low",
+      "severity": "Minor",
+      "epic": "Perl to Python",
+      "status": "Testing",
+      "id": 4
+    }
+  ]
 }

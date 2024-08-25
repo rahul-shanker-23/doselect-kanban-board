@@ -80,6 +80,7 @@ import { APIURL } from "../API_URL";
 const route = useRoute();
 const data = ref({});
 const users = ref([]);
+
 onMounted(async () => {
   const res = await axios.get(`${APIURL}issue/${route.params.id}`);
   const usersRes = await axios.get(`${APIURL}users`);

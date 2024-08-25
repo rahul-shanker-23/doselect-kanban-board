@@ -11,13 +11,12 @@ import { RouterLink } from "vue-router";
 </script>
 <style>
 .sidenav {
-  height: 100%;
+  height: 100vh;
   width: 200px;
-  position: fixed;
-  z-index: 1;
   background-color: #111;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 14px 16px;
+  position: absolute;
 }
 
 .sidenav a {

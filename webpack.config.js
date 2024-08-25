@@ -27,10 +27,10 @@ module.exports = {
   entry: { main: path.resolve(__dirname, "src", "index.js") },
 
   output: {
-    publicPath: "/",
     filename: "js/[name].js",
     clean: true,
     path: path.resolve(__dirname, "build"),
+    publicPath: "/",
   },
 
   module: {
@@ -75,6 +75,9 @@ module.exports = {
   devServer: {
     port: 3000,
     historyApiFallback: true,
+    historyApiFallback: {
+      disableDotRule: true,
+    },
     allowedHosts: "all",
     client: {
       logging: "error",

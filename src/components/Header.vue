@@ -9,6 +9,7 @@
 .topnav {
   overflow: hidden;
   background-color: #0d6efd;
+  position: relative;
 }
 
 .topnav h3 {

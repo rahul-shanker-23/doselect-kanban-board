@@ -66,7 +66,7 @@
         <label for="epic" class="form-label">Epic:</label>
       </div>
       <div class="col-md-4">
-        <select name="Epic" v-model="epic" required>
+        <select name="epic" v-model="epic" required>
           <option v-for="epic in epicLink" :value="epic.title" :key="epic.id">{{ epic.title }}</option>
         </select>
       </div>
@@ -138,4 +138,3 @@ textarea {
   max-height: 150px;
 }
 </style>
-../API_URL

@@ -12,9 +12,9 @@
     </thead>
     <tbody>
       <tr v-for="epic in epics" :key="epic.id">
-        <th scope="row">
+        <td>
           <RouterLink :to="`/backlog/${epic.id}`">{{ epic.id }}</RouterLink>
-        </th>
+        </td>
         <td>
           <RouterLink :to="`/backlog/${epic.id}`">{{ epic.title }}</RouterLink>
         </td>

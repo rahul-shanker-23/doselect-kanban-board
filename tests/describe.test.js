@@ -1,7 +1,7 @@
 import { flushPromises, shallowMount } from "@vue/test-utils";
 import Describe from "../src/components/Describe.vue";
 import axios from "axios";
-import data from "../db.json";
+import data from "./mock.json";
 import { APIURL } from "../src/API_URL";
 import { useRoute } from "vue-router";
 jest.mock("axios");
@@ -31,7 +31,7 @@ describe("Describe", () => {
     const wrapper = shallowMount(Describe);
     await flushPromises();
     const title = wrapper.find("h3");
-    expect(title.text()).toBe("Migrating Header");
+    expect(title.text()).toBe("Migrating header api");
     expect(wrapper.text()).toContain("2");
     expect(wrapper.text()).toContain("Backlog");
     expect(wrapper.text()).toContain("Story");
@@ -40,7 +40,7 @@ describe("Describe", () => {
     expect(wrapper.text()).toContain("Low");
     expect(wrapper.text()).toContain("Minor");
     expect(wrapper.text()).toContain("Perl to Python");
-    expect(wrapper.text()).toContain("Migrating Header Components");
+    expect(wrapper.text()).toContain("Migrating header api");
   });
   it("should modify issue", async () => {
     useRoute.mockReturnValue({

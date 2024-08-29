@@ -1,9 +1,8 @@
 import { flushPromises, shallowMount } from "@vue/test-utils";
 import Epic from "../src/components/Epic.vue";
 import axios from "axios";
-import data from "../db.json";
+import data from "./mock.json";
 import { APIURL } from "../src/API_URL";
-import router from "../src/router";
 jest.mock("axios");
 
 const options = {

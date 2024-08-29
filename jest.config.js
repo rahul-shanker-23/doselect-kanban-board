@@ -27,6 +27,6 @@ module.exports = {
   globals: {
     // define all globals for test here
     BASE_PATH: getBasePath(3000),
-    PROXY_URI: JSON.stringify(PROXY_URI),
+    PROXY_URI: null,
   },
 };

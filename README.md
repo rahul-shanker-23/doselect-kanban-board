@@ -1,20 +1,70 @@
-# Vue: Template for DoSelect Problem Creation
+# Vue: Kanban Board
 
-This is a template for creating project-based Vue problems. You can use this template as a base to create your own problem.
-The template is set up to work both locally and on the DoSelect platform. Please do not make any configuration-related changes.
-Please follow the best practices used for Vue Development in each of your projects.
+## Objective
 
-After you have created the project, follow these steps:
+The Kanban Board Application is a project management tool designed to help teams organize and track their work using a visual board. This application allows users to create, manage, and view tickets categorized into different types: Story, Epic, and Bug. Each ticket has detailed attributes that help teams track and manage tasks effectively.
 
-- Add the files that candidates have to modify to the **default_open_files** array in the [configuration.json](configuration.json) file.
-- Add the test files to the **read_only_files** array in the [configuration.json](configuration.json) file.
-- Modify this README.md file to give candidates relevant instructions for the project. Ensure that candidates can pass the test cases
-- The README.md can be modified to include sections such as Functionality, Testing, and Live Preview.
-- Modify the title of this README.md file to the name of the project.
-- Zip the entire Solution project as `Vue_ProblemName_Solutions.zip` and upload it on the platform.
-- Remove the main logic code that the candidates are being tested on, and save the workspace as `Vue_ProblemName_Stubs.zip`. Then, upload it to the platform.
+## Components
 
-Keep the following instructions unchanged at the end of the README.md file:
+The application consists of four primary components:
+
+### [Create](src/Components/Create.js):
+
+- Fetches a list of users from the server using a GET request to `{apiUrl}users`.
+- Fetches a list of epic from the server using a GET request to `{apiUrl}issue`.
+- Issue Type is having dropdown with options - `Story`, `Epic` and `Bug`.
+- If story is selected, Epic is having dropdown option with list of fetched epic.
+- If Epic is selected Severity and Epic label will not shown.
+- If Bug is selected Epic label will not shown.
+- Reporter and Assignee is having dropdown options with list of fetched users.
+- Priority is having dropdown with options - `Low`, `Medium` and `High` with `Low` as default value.
+- Severity is having dropdown with options - `Minor`, `Major` and `Critical` with `Minor` as default value.
+- Create Issue data as below example and status will be `backlog` for every new issue:
+  ```
+  {
+  issueType:   'Story',
+  title:       'Migration of Header Component',
+  reporter:    'Jake',
+  assignee:    'Beth',
+  description: 'Migration of Header Component from React to Vue',
+  priority:    'Low',
+  severity:    'Minor',
+  epic:        'Migration',
+  status:      'Backlog'
+  }
+  ```
+- On clicking Create button, Create an issue with POST request after successfull creation make an alert with message "Issue created successfully" and redirect to created issue.
+
+### [Backlog](src/Components/Backlog.js):
+
+- Fetches a list of backlog(story and bug) from the server using a GET request to `{apiUrl}issue?issueType=Bug&issueType=Story`.
+- Stores the retrieved data as an array in the component's state.
+- Iterates through the backlog data array and display each backlog (story and bug) in tabular form.
+- Each backlog item is clickable with id and title and routes to the detailed view (`/backlog/{id}`) upon click, where `id` is the specific backlog ID.
+
+### [Epic](src/Components/Epic.js):
+
+- Fetches a list of epic from the server using a GET request to `{apiUrl}issue?issueType=Epic`.
+- Stores the retrieved data as an array in the component's state.
+- Iterates through the epic array and display each epic in tabular form.
+- Each epic item is clickable with id and title and routes to the detailed view (`/backlog/{id}`) upon click, where `id` is the specific epic ID.
+
+### [Describe](src/Components/Describe.js):
+
+- Retrieves detailed information for a specific backlog and epic using a GET request to `{apiUrl}issue/{id}`.
+- Fetches a list of users from the server using a GET request to `{apiUrl}users`.
+- Display the fetched data corresponding to its label.
+- Display Priority, Severity, Reporter, Assignee as dropdown with values as current fetched value and option as defined in Create Component.
+- Status is having dropdown with options Backlog, In Progress, Testing, In Review, Closed and Done.
+- On clicking Save button, Update the issue with current selected values with PUT request to `{apiUrl}issue/{id}`.
+
+## Routing
+
+Routing logic is implemented within the [router.js](src/router.js) component.
+
+## Expected Live Preview
+
+![Live Preview (Placeholder)](https://media-doselect.s3.amazonaws.com/generic/2e11nd5V5V8g2LKO4JrBwMO0E/kanban-board.gif)
 
 ## Commands
 

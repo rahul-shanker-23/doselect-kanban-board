@@ -1,7 +1,7 @@
 import { flushPromises, shallowMount } from "@vue/test-utils";
 import Create from "../src/components/Create.vue";
 import axios from "axios";
-import data from "../db.json";
+import data from "./mock.json";
 import { APIURL } from "../src/API_URL";
 import router from "../src/router";
 

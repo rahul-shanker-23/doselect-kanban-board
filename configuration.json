@@ -1,9 +1,16 @@
 {
     "version": "1.0",
     "default_open_files": [
+      "src/components/Backlog.vue",
+      "src/components/Create.vue",
+      "src/components/Describe.vue",
+      "src/components/Epic.vue"
       ],
     "read_only_files": [
-      "tests/*", 
+      "tests/backlog.test.js",
+      "tests/create.test.js",
+      "tests/describe.test.js",
+      "tests/epic.test.js", 
       ".gitignore", 
       "configuration.json"
       ],
